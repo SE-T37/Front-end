@@ -4,35 +4,81 @@
 <head>
   <meta charset="utf-8">
   <title id="title">Nomad.bs</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel2="dynamic" href="script.js">
 </head>
 
 <body>
+
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="style.css">
+
   <header>
-    <a href="home.html"><h1>Nomadbees</h1></a>
-    
+    <a href="home.html">
+      <h1 class="nomadbeesheader">Nomadbees</h1>
+    </a>
+
     <nav>
       <a href="luoghi.html"><button type="button" id="btn-luoghi">Luoghi</button></a>
       <a href="seguiti.html"><button type="button" id="btn-seguiti">Seguiti</button></a>
       <a href="crea.html"><button type="button" id="btn-crea">Crea</button></a>
       <a href="profilo.html"><button type="button" id="btn-profilo">Profilo</button></a>
-   </nav>
-   
+    </nav>
+
   </header>
   <main>
-  
-    <section id="seguiti">
-        
-        <h2>Seguiti</h2>
-    
+
+    <div class="flexbox">
+      <a href=""> <!--qui dovrebbe portare alla pagina dell utente-->
+        <img src="tmp/utente1.png" alt="Error" class="avatar" height="80" width="80">
+      </a>
+
+      <a href=""> <!--qui dovrebbe portare alla pagina dell utente-->
+        <img src="tmp/utente1.png" alt="Error" class="avatar" height="80" width="80">
+      </a>
+
+      <div id="btnaddfollow">
+        <img src="tmp/addfollow.png" class="avatar" height="80" width="80">
+      </div>
+    </div>
+
+    <section id="viaggio1">
+      <a href=""> <!--qui dovrebbe portare alla pagina dell utente / viaggio-->
+        <div class="flexbox">
+          <img src="tmp/fotoviaggio1.png" alt="Error" height="120" width="120">
+          <p class="descrizioneviaggio">
+            Questa sezione contiene la descrizione del viaggio 1
+          </p>
+        </div>
+      </a>
     </section>
 
+    <section id="viaggio2">
+      <a href=""> <!--qui dovrebbe portare alla pagina dell utente / viaggio-->
+        <div class="flexbox">
+          <img src="tmp/fotoviaggio2.png" alt="Error" height="120" width="120">
+          <p class="descrizioneviaggio">
+            Questa sezione contiene la descrizione del viaggio 2
+          </p>
+        </div>
+      </a>
+    </section>
+
+    <section id="viaggio3">
+      <a href=""> <!--qui dovrebbe portare alla pagina dell utente / viaggio-->
+        <div class="flexbox">
+          <img src="tmp/fotoviaggio3.png" alt="Error" height="120" width="120">
+          <p class="descrizioneviaggio">
+            Questa sezione contiene la descrizione del viaggio 3
+          </p>
+        </div>
+      </a>
+    </section>
+    </div>
   </main>
-  
+
   <footer>
     <p>Copyright Nomadbees 2021</p>
   </footer>
-  
+
 </body>
+
 </html>
