@@ -15,14 +15,18 @@ a:active {
 }
 
 .nomadbeesheader {
+  position: fixed;
+  top: 0.8%;
+  padding-left: 5px;
   color: #fff;
 }
 
 #map {
   float: right;
   padding: 2%;
-  height: 700px;
-  width: 700px;
+  height:650px;
+  width: 650px;
+  border-radius: 10px;
 }
 
 .descrizioneviaggio {
@@ -31,10 +35,13 @@ a:active {
 }
 
 #tappelist {
-  padding-top: 5%;
   width: 55%;
-  height: 90%;
+  height: 750px;
   overflow: scroll;
+}
+
+.tappaselection {
+  height: 60px;
 }
 
 main {
@@ -44,12 +51,18 @@ main {
 
 section {
   border: 1px solid #ccc;
-  padding: 20px;
+  background-color: #fff;
+  padding: 16px;
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 .clear {
   clear: both;
+}
+
+.roundedimg {
+  border-radius: 10px;
 }
 
 .avatar {
@@ -62,9 +75,11 @@ section {
   margin-left: auto;
   margin-right: auto;
   width: 60%;
+  border-radius: 10px;
 }
 
 #profilesection {
+  position: fixed;
   width: 25%;
 }
 
@@ -72,27 +87,55 @@ section {
   text-align: center;
 }
 
+#btnprofile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+
 .flexbox {
   display: flex;
 }
 
-.searchbar {
+.viaggisearchbar {
+  position: fixed;
+  width: 95%;
   display: flex;
   padding: 16px;
+  padding-bottom: 32px;
 }
 
 .viaggisearchbox {
+  height: 32px;
   flex-grow: 1000;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#btncerca {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .viaggilist {
-  padding-top: 5%;
-  padding-bottom: 5%;
+  padding-top: 100px;
   height: 90%;
   overflow: scroll;
 }
 
+#viaggiprofilolist {
+  width: 60%;
+  margin-top: -100px;
+  margin-left: 40%;
+  margin-right: 30px;
+}
+
 body {
+  background-color: #f5f5f5;
+  padding-top: 5%;
+  padding-bottom: 5%;
   position: relative;
 }
 
@@ -121,7 +164,26 @@ footer {
   left: 0;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+.btnstop {
+  padding-right: 60px;
+}
+
+.btntop {
+  width: 70px;
+  height: 50px;
+}
+
+#pallini {
+  position: fixed;
+  right: 30px;
+  top: 100px;
+}
+
+#popupprofile {
+  display: none;
+  position: fixed;
+  top: 15%;
+  bottom: 25%;
+  left: 40%;
+  right: 40%;
 }
