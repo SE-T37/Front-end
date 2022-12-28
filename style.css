@@ -27,10 +27,9 @@ input {
 }
 
 .nomadbeesheader {
-  height: 400px;
+  height: 40px;
+  margin-top: -2px;
   width: auto;
-  margin-left: -5px;
-  margin-top: -15px;
 }
 
 .btnstop {
@@ -59,9 +58,11 @@ input {
 
 #map {
   float: right;
+  margin-right: 40px;
   height: 500px;
-  width: 40%;
-  background-color: rgb(255, 0, 0);
+  width: 500px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
 
 .descrizioneviaggio {
@@ -113,14 +114,25 @@ input {
   width: 32px;
 }
 
+input[type='file'] {
+  color: transparent;
+}
+
 .btnaggiungifoto {
-  border-top-right-radius: 0px;
-  border-top-left-radius: 0px;
-  border-bottom-right-radius: 0px;
-  border-bottom-left-radius: 0px;
+  margin-right: -50px;
+  margin-top: 60px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+#btnpost {
+  position: fixed;
+  width: 64px;
+  height: 46px;
   border: 1px solid #ccc;
+  border-radius: 10px;
   background-color: #fff;
-  width: 32px;
 }
 
 main {
@@ -213,8 +225,9 @@ section {
 }
 
 .viaggilist {
-  padding-top: 100px;
-  height: 450px;
+  margin-top: -50px;
+  padding-top: 150px;
+  height: 460px;
   overflow: scroll;
 }
 

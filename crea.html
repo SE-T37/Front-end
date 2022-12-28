@@ -8,32 +8,18 @@
 
 <body>
 
-  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFAdQBJStTyfgZ9h7q6eZQsjRR2j8mYmE&callback=initMap">
+  <script src="scripts/maps.js">
   </script>
-  <script>
-    let map;
-    function initMap() {
-
-      var docelement = document.getElementById('map');
-      var attributes = {
-        center: { lat: 46.074779, lng: 11.121749 },
-        zoom: 12,
-        disableDefaultUI: true
-      }
-      map = new google.maps.Map(docelement, attributes);
-    }
-
-    function initAutocomp(index) {
-      var target = 'tappasearchbox'.concat(index);
-      var input = document.getElementById(target);
-      new google.maps.places.Autocomplete(input);
-    }
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default">
   </script>
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFAdQBJStTyfgZ9h7q6eZQsjRR2j8mYmE&libraries=places&v=weekly&callback=initMap">
+    </script>
   <link rel="stylesheet" href="style.css">
 
   <header>
     <a href="home.html">
-      <img class=nomadbeesheader src="assets/logo.svg">
+      <img class="nomadbeesheader" src="assets/logo.svg">
     </a>
 
     <nav class="btnstop">
@@ -56,22 +42,32 @@
     <div id="tappelist">
 
       <section class="viaggio" id="tappaselection1" onload="initAutocomp(1)">
-
         <div class="tappasearchbar">
           <input type="text" class="tappasearchbox" id="tappasearchbox1" placeholder="Search location">
-          <button type="button" class="btnaggiungifoto" id="btnaggiungifoto1">⊂⊃</button>
           <button type="button" class="btncercatappa" id="btncercatappa1">⌕</button>
         </div>
-
         <div class="flexbox">
-          <img class="roundedimg" src="tmp/fotoviaggio1.png" alt="Error" height="100" width="100">
+          <img id="image1" class="roundedimg" src="assets/image.svg" alt="Error" height="100" width="100">
           <textarea rows="5" cols="60" class="inputdescrizione" id="inputdescrizione1"
             placeholder="Insert description"></textarea>
+          <input type="file" class="btnaggiungifoto" id="btnaggiungifoto1" accept="image/*">
         </div>
-
       </section>
 
+      <section class="viaggio" id="tappaselection2" onload="initAutocomp(2)">
+        <div class="tappasearchbar">
+          <input type="text" class="tappasearchbox" id="tappasearchbox2" placeholder="Search location">
+          <button type="button" class="btncercatappa" id="btncercatappa2">⌕</button>
+        </div>
+        <div class="flexbox">
+          <img id="image1" class="roundedimg" src="assets/image.svg" alt="Error" height="100" width="100">
+          <textarea rows="5" cols="60" class="inputdescrizione" id="inputdescrizione2"
+            placeholder="Insert description"></textarea>
+          <input type="file" class="btnaggiungifoto" id="btnaggiungifoto2" accept="image/*">
+        </div>
+      </section>
 
+      <button id="btnpost">Post!</button>
 
     </div>
 
