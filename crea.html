@@ -8,11 +8,27 @@
 
 <body>
 
-  <!--
-  <script async 
-    src="https://maps.googleapis.com/maps/api/js?key=LMAO&callback=initMap">
-    </script> -->
-  <script src="script.js"></script> 
+  <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBFAdQBJStTyfgZ9h7q6eZQsjRR2j8mYmE&callback=initMap">
+  </script>
+  <script>
+    let map;
+    function initMap() {
+
+      var docelement = document.getElementById('map');
+      var attributes = {
+        center: { lat: 46.074779, lng: 11.121749 },
+        zoom: 12,
+        disableDefaultUI: true
+      }
+      map = new google.maps.Map(docelement, attributes);
+    }
+
+    function initAutocomp(index) {
+      var target = 'tappasearchbox'.concat(index);
+      var input = document.getElementById(target);
+      new google.maps.places.Autocomplete(input);
+    }
+  </script>
   <link rel="stylesheet" href="style.css">
 
   <header>
@@ -35,11 +51,11 @@
 
   <main>
 
-    <section id="map"></section>
+    <div id="map" onload="initMap()"></div>
 
     <div id="tappelist">
 
-      <section class="viaggio" id="tappaselection1">
+      <section class="viaggio" id="tappaselection1" onload="initAutocomp(1)">
 
         <div class="tappasearchbar">
           <input type="text" class="tappasearchbox" id="tappasearchbox1" placeholder="Search location">
