@@ -58,12 +58,11 @@ input {
 }
 
 #map {
-  float: right;
-  padding: 2%;
-  height:450px;
-  width: 450px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
+  position: fixed;
+  right: 40px;
+  top: 12%;
+  height: 500px;
+  width: 500px;
 }
 
 .descrizioneviaggio {
@@ -341,4 +340,25 @@ footer {
 .usernamesmall {
   color: #121212;
   padding-left: 10%;
+}
+
+#btnconfirmedit {
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  height: 30px;
+  width: 30px;
+}
+
+.editentry {
+  padding: 10px;
+}
+
+.editfield {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  height: 20px;
+  width: 50%;
 }

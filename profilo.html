@@ -8,7 +8,10 @@
 
 <body>
 
-  <script src="script.js"></script>
+  <script>
+    function closePopUp() { document.getElementById("popupprofile").style.display = 'none'; };
+    function popUp() { document.getElementById("popupprofile").style.display = 'block'; }
+  </script>
   <link rel="stylesheet" href="style.css">
 
   <header>
@@ -17,10 +20,14 @@
     </a>
 
     <nav class="btnstop">
-      <a href="luoghi.html"><button type="button" class="btntop" id="btnluoghi"><img src="assets/places.svg" height="40" width="40"></button></a>
-      <a href="seguiti.html"><button type="button" class="btntop" id="btnseguiti"><img src="assets/followers.svg" height="40" width="40"></button></a>
-      <a href="crea.html"><button type="button" class="btntop" id="btncrea"><img src="assets/create.svg" height="40" width="40"></button></a>
-      <a href="profilo.html"><button type="button" class="btntop" id="btnprofilo"><img src="assets/profile.svg" height="40" width="40"></button></a>
+      <a href="luoghi.html"><button type="button" class="btntop" id="btnluoghi"><img src="assets/places.svg" height="40"
+            width="40"></button></a>
+      <a href="seguiti.html"><button type="button" class="btntop" id="btnseguiti"><img src="assets/followers.svg"
+            height="40" width="40"></button></a>
+      <a href="crea.html"><button type="button" class="btntop" id="btncrea"><img src="assets/create.svg" height="40"
+            width="40"></button></a>
+      <a href="profilo.html"><button type="button" class="btntop" id="btnprofilo"><img src="assets/profile.svg"
+            height="40" width="40"></button></a>
     </nav>
 
   </header>
@@ -29,12 +36,30 @@
     <div id="profilesection">
       <img id="avatarsqr" src="assets/defUser.svg">
       <h1 id="usernamefield">Username</h1>
-      <button type="button" id="btnprofile">Edit Profile</button>
+      <button onclick="popUp()" type="button" id="btnprofile">Edit Profile</button>
     </div>
 
     <section class="popup" id="popupprofile">
-      <button class="btnclosepopup">✖</button>
+      <button onClick="closePopUp()" class="btnclosepopup">✖</button>
       <h1>Edit Profile</h1>
+
+      <div class="editentry">
+          <p>Username: </p>
+          <input id="usernamefield" class="editfield" type="text">
+      </div>
+
+
+      <div class="editentry">
+          <p>Password: </p>
+          <input id="passwordfield" class="editfield" type="text">
+      </div>
+
+      <div class="editentry">
+          <p>Confirm </p>
+          <input id="confirmfield" class="editfield" type="text">
+          <button onClick="closePopUp()" id="btnconfirmedit">✔</button>
+      </div>
+
     </section>
 
     <div class="viaggilist" id="viaggiprofilolist">
