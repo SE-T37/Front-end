@@ -1,4 +1,6 @@
 let map;
+let pathCoordinates = Array();
+
 
 function initMap() {
     
@@ -6,7 +8,5 @@ function initMap() {
         center: {lat: 46.074779, lng: 11.121749},
         zoom: 12
     }
-
-    map = new google.maps.Map(document.getElementById("map"), attributes);
+    map = new google.maps.Map(document.getElementById('map'), attributes);
 }
-

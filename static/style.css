@@ -14,10 +14,47 @@ a:active {
   text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+button:hover {
+  background-color: #ccc !important;
+}
+
+input {
+  padding-left: 15px;
+}
+
 .nomadbeesheader {
-  color: #fff;
-  margin-left: 5px;
-  margin-top: -5px;
+  height: 400px;
+  width: auto;
+  margin-left: -5px;
+  margin-top: -15px;
+}
+
+.btnstop {
+  position: relative;
+  display: flex;
+  margin-right: 40px;
+  margin-top: -7px;
+}
+
+.btntop {
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  width: 70px;
+  height: 50px;
+}
+
+#btnluoghi {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#btnprofilo {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 #map {
@@ -40,8 +77,18 @@ a:active {
   overflow: scroll;
 }
 
-.tappaselection {
-  height: 60px;
+.viaggio {
+  height: 125px;
+}
+
+.inputdescrizione {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100%;
+  margin: 5px;
+  margin-left: 10px;
+  resize: none;
+  border: none;
+  outline: none;
 }
 
 .tappasearchbar {
@@ -55,6 +102,7 @@ a:active {
   border-bottom-right-radius: 0px;
   border-bottom-left-radius: 8px;
   border: 1px solid #ccc;
+  outline: none;
 }
 
 .btncercatappa {
@@ -98,12 +146,6 @@ section {
   border-radius: 10px;
 }
 
-.avatar {
-  border-radius: 50%;
-  border: 1px solid #ccc;
-  padding: 10;
-}
-
 #avatarsqr {
   display: block;
   margin-left: auto;
@@ -126,13 +168,16 @@ section {
   margin-left: auto;
   margin-right: auto;
   width: 60%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
 }
 
 .flexbox {
   display: flex;
 }
 
-.viaggisearchbar {
+#viaggisearchbar {
   position: fixed;
   margin-left: 25%;
   margin-right: 25%;
@@ -140,16 +185,17 @@ section {
   display: flex;
 }
 
-.viaggisearchbox {
+#viaggisearchbox {
   height: 32px;
   flex-grow: 50;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
   border: 1px solid #ccc;
-  background-color: #fff;
+  outline: none;
 }
 
 #btncercaviaggio {
+  width: 64px;
   border-top-left-radius: 0px;
   border-top-right-radius: 10px;
   border-bottom-left-radius: 0px;
@@ -159,6 +205,7 @@ section {
 }
 
 #btnfiltri {
+  width: 64px;
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
@@ -212,27 +259,86 @@ footer {
   left: 0;
 }
 
-.btnstop {
-  margin-right: 60px;
-  margin-top: -5px;
-}
-
-.btntop {
-  width: 70px;
-  height: 50px;
-}
-
 #pallini {
   position: fixed;
   right: 30px;
   top: 100px;
 }
 
-#popupprofile {
+.avatar {
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  margin: 5px;
+}
+
+#btnaddfollow {
+  width: min-content;
+  height: min-content;
+  margin-left: -3px;
+  border: none;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+#btnaddfollow:hover {
+  cursor: pointer;
+  background-color: #fff !important;
+}
+
+.popup {
   display: none;
   position: fixed;
   top: 15%;
   bottom: 25%;
   left: 40%;
   right: 40%;
+  text-align: center;
+}
+
+.btnclosepopup {
+  float: right;
+  border: none;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+#followsearchbar {
+  display: flex;
+  position: relative;
+  left: 10%;
+}
+
+#followsearchbox{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 0px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+#btncercafollow {
+  width: 40px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+#userlist {
+  margin-top: 10%;
+  height: 90%;
+  overflow: scroll;
+}
+
+.userentry {
+  display: flex;
+  height: 10%;
+}
+
+.usernamesmall {
+  color: #121212;
+  padding-left: 10%;
 }
