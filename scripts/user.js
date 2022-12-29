@@ -1,14 +1,16 @@
-var logged = false;
-var username = "Not Logged In";
-
 function checkPrivileges(url) {
-    if (logged)
+    if (document.cookie != "")
         location.replace(url);
     else
         location.replace("profilo.html");
 }
 
 function getUsername() {
+    var username;
+    if (document.cookie == "")
+        username = "Not Logged In";
+    else
+        username = document.cookie.split(';')[0].split('=')[1].trim();
     document.getElementById("usernamefield").innerHTML = username;
 }
 
@@ -30,8 +32,9 @@ function login() {
         })
 
         .then((data) => {
-            username = data.username;
-            document.getElementById("usernamefield").innerHTML = username;
+    if (document.cookie != "")
+            document.cookie = "username=".concat(data.username).concat("; path=/");
+            document.getElementById("usernamefield").innerHTML = data.username;
         })
 
         .catch(function (error) {
@@ -40,4 +43,8 @@ function login() {
             elem.getElementsByClassName("errorfield").innerHTML = error;
             console.log(error);
         });
+}
+
+function logout() {
+    document.cookie = "";
 }

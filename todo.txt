@@ -7,8 +7,8 @@ login con testuser						OK
 
 TESTARE LOGIN
 
-edit profile							
+edit profile								
 mettere testtappe						
-gestire utente loggato per ottenere
-	lista viaggi
-	lista amici
+gestire utente loggato per ottenere		
+	lista viaggi						
+	lista amici							
