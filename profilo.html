@@ -8,10 +8,7 @@
 
 <body>
 
-  <script>
-    function closePopUp() { document.getElementById("popupprofile").style.display = 'none'; };
-    function popUp() { document.getElementById("popupprofile").style.display = 'block'; }
-  </script>
+  <script src="scripts/profilo.js"></script>
   <link rel="stylesheet" href="styles/profilo.css">
 
   <header>
@@ -44,20 +41,20 @@
       <h1>Edit Profile</h1>
 
       <div class="editentry">
-          <p>Username: </p>
-          <input id="usernamefield" class="editfield" type="text">
+        <p>Username: </p>
+        <input id="usernamefield" class="editfield" type="text">
       </div>
 
 
       <div class="editentry">
-          <p>Password: </p>
-          <input id="passwordfield" class="editfield" type="text">
+        <p>Password: </p>
+        <input id="passwordfield" class="editfield" type="text">
       </div>
 
       <div class="editentry">
-          <p>Confirm </p>
-          <input id="confirmfield" class="editfield" type="text">
-          <button onClick="closePopUp()" id="btnconfirmedit">✔</button>
+        <p>Confirm </p>
+        <input id="confirmfield" class="editfield" type="text">
+        <button onClick="closePopUp()" id="btnconfirmedit">✔</button>
       </div>
 
     </section>
@@ -65,7 +62,7 @@
     <div class="viaggilist" id="viaggiprofilolist">
 
       <section class="viaggio" id="myviaggio1">
-        <a href=""> 
+        <a href="">
           <div class="flexbox">
             <img class="roundedimg" src="assets/image.svg" alt="Error" height="120" width="120">
             <p class="descrizioneviaggio">
